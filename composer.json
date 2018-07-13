@@ -1,0 +1,58 @@
+{
+    "name": "imliam/laravel-macros",
+    "description": "A collection of miscellaneous methods to extend some of Laravel's core classes through the use of macros and mixins",
+    "keywords": [
+        "imliam",
+        "laravel-macros",
+        "laravel",
+        "macros",
+        "mixins"
+    ],
+    "homepage": "https://github.com/imliam/laravel-macros",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Liam Hammett",
+            "email": "liam@liamhammett.com",
+            "homepage": "https://liamhammett.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0",
+        "larapack/dd": "^1.0",
+        "orchestra/testbench": "^3.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ImLiam\\Macros\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ImLiam\\Macros\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "test:windows": "vendor\\bin\\phpunit",
+        "test-coverage:windows": "vendor\\bin\\phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ImLiam\\Macros\\MacrosServiceProvider"
+            ],
+            "aliases": {
+                "Macros": "ImLiam\\Macros\\MacrosFacade"
+            }
+        }
+    }
+}
